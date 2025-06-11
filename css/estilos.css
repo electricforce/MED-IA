@@ -1,0 +1,388 @@
+/* Css del "inicio.html" */
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Contenedor general */
+.contenedor {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  font-family: Arial, sans-serif;
+  position: relative;
+}
+
+/* Fondo opacado al abrir el menú */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 900;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.overlay.visible {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Barra lateral izquierda */
+.barra-lateral {
+  width: 250px;
+  background-color: #205191;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100vh;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  left: 0;
+  top: 0;
+  transition: transform 0.3s ease;
+  z-index: 1100;
+  transform: translateX(0);
+}
+.barra-lateral.visible {
+  transform: translateX(0);
+}
+@media (max-width: 768px) {
+  .barra-lateral {
+    transform: translateX(-100%);
+  }
+}
+
+.perfil {
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.nombre-usuario {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.menu {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.opcion {
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.opcion:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.principal {
+  margin-left: 250px;
+  width: calc(100% - 250px);
+  display: flex;
+  flex-direction: column;
+  transition: margin-left 0.3s ease;
+}
+@media (max-width: 768px) {
+  .principal {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+.barra-superior {
+  height: 60px;
+  background-color: #1abc9c;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  color: white;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.barra-superior-titulo {
+  flex: 1;
+  text-align: center;
+  font-size: 18px;
+}
+@media (max-width: 768px) {
+  .barra-superior-titulo {
+    text-align: left;
+  }
+}
+
+.barra-superior-derecha {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.btn-agendar {
+  background-color: #205191;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+.btn-agendar:hover {
+  background-color: #183d73;
+}
+
+.btn-notificacion {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.icon-campana {
+  stroke: white;
+  width: 24px;
+  height: 24px;
+}
+
+.btn-menu-hamburguesa {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 25px;
+  height: 22px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1200;
+}
+.btn-menu-hamburguesa span {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+@media (max-width: 768px) {
+  .btn-menu-hamburguesa {
+    display: flex;
+  }
+}
+.btn-menu-hamburguesa.abierto span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.btn-menu-hamburguesa.abierto span:nth-child(2) {
+  opacity: 0;
+}
+.btn-menu-hamburguesa.abierto span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.contenido {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+}
+
+/* btn cerrar sesión */
+.cerrar-sesion {
+  margin-top: auto;
+  width: 100%;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+.cerrar-sesion .opcion.salir {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+.cerrar-sesion .opcion.salir:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.icon-salir {
+  stroke: white;
+  width: 20px;
+  height: 20px;
+}
+
+/* === Búsqueda === */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto 0;
+  width: 100%;
+}
+.search-input {
+  width: 80%;
+  max-width: 600px;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 25px;
+  outline: none;
+  transition: 0.3s ease;
+}
+.search-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0,123,255,0.4);
+}
+
+/* === Grid de doctores === */
+.doctors-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+  width: 100%;
+}
+
+/* === Tarjeta de doctor (osea, el perfil que sale en el inicio pues) === */
+.doctor-card {
+  width: 100%;
+  max-width: 280px;
+  background-color: transparent;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.doctor-top {
+  background-color: #4A90E2;
+  width: 100%;
+  text-align: center;
+  padding: 20px 10px 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.profile-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+
+.specialty {
+  font-weight: bold;
+  color: white;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* PARTE INFERIOR (color de la parte inferior)*/
+.doctor-bottom {
+  background-color: #f0f0f0;
+  width: 100%;
+  padding: 50px 15px 20px;
+  margin-top: -30px;
+  position: relative;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  z-index: 2;
+  text-align: center;
+}
+
+.doctor-name {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #f0f0f0;
+  border: 2px solid #ccc;
+  border-radius: 50px;
+  padding: 8px 20px;
+  font-weight: bold;
+  font-size: 14px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 3;
+}
+
+.doctor-info {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-top: 10px;
+  color: #333;
+  justify-content: center;
+  gap: 8px;
+}
+
+.doctor-info i {
+  color: #4A90E2;
+}
+
+.view-more {
+  margin-top: 15px;
+  background-color: #4A90E2;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.view-more:hover {
+  background-color: #357ABD;
+}
+
+/* Responsive  */
+@media (max-width: 768px) {
+  .doctor-card {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .search-input {
+    width: 90%;
+  }
+}

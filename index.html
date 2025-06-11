@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Página Web Moderna</title>
+  <link rel="stylesheet" href="css/estilos.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <nav class="navbar-contenido">
+      <ul class="menu">
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Especialidades</a></li>
+        <li><a href="#">Contacto</a></li>
+        <li><a href="#">Chat</a></li>
+      </ul>
+      <div class="login-icon">
+        <!-- Ícono de login  -->
+            <a href="login.html" class="login-icon">
+            <svg width="30" height="30" fill="white" viewBox="0 0 24 24">
+                <path d="M10 17l5-5-5-5v10zM20 3H4c-1.1 0-2 .9-2 2v4h2V5h16v14H4v-4H2v4c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/>
+            </svg>
+            </a>
+      </div>
+    </nav>
+  </header>
+
+
+  <section class="hero">
+    <img src="img/imgHd.jpg" alt="Imagen principal"/>
+  </section>
+
+ 
+  <section class="info-seccion">
+    <div class="contenedor-negro">
+      <div class="imagenes">
+        <img src="img/ImagenDivUno.jpg" alt="Imagen superior" class="img-superior"/>
+        <img src="img/ImagenDivDos.jpg" alt="Imagen inferior" class="img-inferior"/>
+      </div>
+      <div class="texto">
+        <p>
+          Sabemos que tu tiempo es valioso. Por eso, hemos creado una forma rápida y sencilla de agendar tus citas médicas. Sin filas, sin llamadas, sin complicaciones. Estamos aquí para hacer tu vida más fácil y cuidar de tu salud cuando más lo necesitas.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="iconos">
+    <div class="icon-placeholder"></div>
+    <div class="icon-placeholder"></div>
+    <div class="icon-placeholder"></div>
+    <div class="icon-placeholder"></div>
+  </section>
+  
+
+
+  <section class="division-central">
+    <hr />
+    <div class="contenido-dividido">
+      <p class="texto-izquierda">
+        Contamos con los mejores especialistas, cuidadosamente 
+        seleccionados para brindarte una atención médica de calidad, centrada en tu bienestar y salud integral. Estás en buenas manos.
+      </p>
+      <img src="img/imagenInferior.png" alt="Texto e imagen relacionada"/>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Tu Sitio. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    // Scroll 
+    window.addEventListener('scroll', () => {
+      const navbar = document.querySelector('.navbar');
+      navbar.classList.toggle('scroll-activo', window.scrollY > 50);
+    });
+  </script>
+</body>
+</html>
