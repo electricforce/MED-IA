@@ -1,6 +1,3 @@
-
-<!--IMPORTANTE-->
-<!--Esto de momento no se está usando porque lo estoy cambiando desde cero (Sólo este html no se utilizará, pero igual lo dejé para ir comparando)-->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -11,11 +8,11 @@
 </head>
 <body>
 
-   
+    <!-- NAVBAR transparente, fija y con efecto al hacer scroll -->
     <header class="navbar">
         <nav>
             <ul>
-                <li><a href="#">Inicio</a></li>
+                <li><a href="inicio">Inicio</a></li>
                 <li><a href="#">Servicios</a></li>
                 <li><a href="#">Especialidades</a></li>
                 <li><a href="#">Contacto</a></li>
@@ -24,20 +21,20 @@
         </nav>
     </header>
 
-  
+    <!-- IMAGEN PRINCIPAL (rotará luego con otras) -->
     <section class="hero">
         <img src="img/imagenPrincipal.jpg" alt="Imagen principal">
-        
-        
+        <!-- Aquí puedes agregar más imágenes para rotar -->
+        <!-- Ejemplo: <img src="img/otraImagen.jpg" class="oculta"> -->
     </section>
 
-    
+    <!-- DIVISIÓN NEGRA CON TEXTO E IMÁGENES -->
     <section class="info-seccion">
         <div class="contenedor-negro">
             <div class="imagenes">
                 <img src="img/imgSup.jpg" alt="Imagen superior" class="img-superior">
                 <img src="img/imgInf.jpg" alt="Imagen inferior" class="img-inferior">
-                
+                <!-- Puedes ajustar el tamaño con width y height en CSS -->
             </div>
             <div class="texto">
                 <p>
@@ -47,7 +44,7 @@
         </div>
     </section>
 
-  
+    <!-- ICONOS TEMPORALES -->
     <section class="iconos">
         <div class="icon-placeholder"></div>
         <div class="icon-placeholder"></div>
@@ -55,7 +52,7 @@
         <div class="icon-placeholder"></div>
     </section>
 
-   
+    <!-- SECCIÓN DIVIDIDA POR LÍNEA -->
     <section class="division-central">
         <hr>
         <div class="contenido-dividido">
@@ -64,13 +61,13 @@
         </div>
     </section>
 
-  
+    <!-- FOOTER -->
     <footer>
         <p>&copy; 2025 Tu Sitio. Todos los derechos reservados.</p>
     </footer>
 
     <script>
-        
+        // Cambia la navbar al hacer scroll
         window.addEventListener('scroll', () => {
             const navbar = document.querySelector('.navbar');
             navbar.classList.toggle('scroll-activo', window.scrollY > 50);
