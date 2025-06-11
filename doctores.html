@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mi Página Web</title>
   <link rel="stylesheet" href="css/estilos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
     .opcion {
       text-decoration: none;
@@ -119,7 +121,7 @@
         <div class="barra-superior-derecha">
           <button class="btn-agendar">Agendar cita</button>
           <button class="btn-notificacion" aria-label="Notificaciones">
-            <!-- Icono campana SVG -->
+            <!-- Icono campana  -->
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2"
               stroke-linecap="round" stroke-linejoin="round" class="icon-campana" viewBox="0 0 24 24" width="24" height="24">
               <path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"></path>
@@ -128,10 +130,11 @@
           </button>
         </div>
       </div>
+      <!--inicio del Contenido-->
 
-      <div class="contenido">
-        Área de contenido
-        <!-- Barra de búsqueda -->
+<!--Contenido-->
+<div class="contenido">
+  <!-- Barra de búsqueda -->
   <div class="search-container">
     <input type="text" class="search-input" placeholder="Buscar doctor...">
   </div>
@@ -141,28 +144,29 @@
     <!-- Ejemplo de tarjeta -->
     <div class="doctor-card">
       <div class="doctor-top">
-        <p class="specialty">Cardiólogo</p>
-        <img src="img/perfilUsuario01.jpg" alt="Doctor 1" class="profile-img">
+        <p class="specialty">Cardióloga</p>
+        <img src="img/perfilDoctor02.png" alt="Doctor 1" class="profile-img">
       </div>
       <div class="doctor-bottom">
-        <div class="doctor-name">Dr. Juan Pérez</div>
+        <div class="doctor-name">Dra. Laura Martínez</div>
         <div class="doctor-info"><i class="fas fa-hospital"></i> Clínica San José</div>
         <div class="doctor-info"><i class="fas fa-clock"></i> 08:00 - 16:00</div>
         <div class="doctor-info"><i class="fas fa-star"></i> 4.7</div>
-        <button class="view-more">Ver más</button>
+        <button class="view-more" onclick="window.location.href='doctor01.html'">Ver más</button>
+
       </div>
     </div>
 
     <!-- sección doctores (debo cambiar los datos para emular otros perfiles) -->
     <div class="doctor-card">
       <div class="doctor-top">
-        <p class="specialty">Pediatra</p>
-        <img src="img/perfilUsuario01.jpg" alt="Doctor 2" class="profile-img">
+        <p class="specialty">Médico General</p>
+        <img src="img/perfilDoctor03.png" alt="Doctor 2" class="profile-img">
       </div>
       <div class="doctor-bottom">
-        <div class="doctor-name">Dra. Laura Ruiz</div>
-        <div class="doctor-info"><i class="fas fa-hospital"></i> Hospital Infantil</div>
-        <div class="doctor-info"><i class="fas fa-clock"></i> 09:00 - 17:00</div>
+        <div class="doctor-name">Dr. Raúl Hoyos</div>
+        <div class="doctor-info"><i class="fas fa-hospital"></i> Hospital del Niño</div>
+        <div class="doctor-info"><i class="fas fa-clock"></i> 11:00 - 21:00</div>
         <div class="doctor-info"><i class="fas fa-star"></i> 4.9</div>
         <button class="view-more">Ver más</button>
       </div>
@@ -172,13 +176,58 @@
         <div class="doctor-card">
       <div class="doctor-top">
         <p class="specialty">Pediatra</p>
-        <img src="img/perfilUsuario01.jpg" alt="Doctor 3" class="profile-img">
+        <img src="img/perfilDoctor04.png" alt="Doctor 3" class="profile-img">
       </div>
       <div class="doctor-bottom">
-        <div class="doctor-name">Dra. Laura Ruiz</div>
-        <div class="doctor-info"><i class="fas fa-hospital"></i> Hospital Infantil</div>
+        <div class="doctor-name">Dra. Claudia Ruiz</div>
+        <div class="doctor-info"><i class="fas fa-hospital"></i> Hospital San Miguel Arcángel</div>
         <div class="doctor-info"><i class="fas fa-clock"></i> 09:00 - 17:00</div>
         <div class="doctor-info"><i class="fas fa-star"></i> 4.9</div>
+        <button class="view-more">Ver más</button>
+      </div>
+    </div>
+
+
+        <div class="doctor-card">
+      <div class="doctor-top">
+        <p class="specialty">Cardiólogo</p>
+        <img src="img/perfilDoctor05.png" alt="Doctor 4" class="profile-img">
+      </div>
+      <div class="doctor-bottom">
+        <div class="doctor-name">Dr. Manuel Fuentes</div>
+        <div class="doctor-info"><i class="fas fa-hospital"></i> Hospital Santo Tomás</div>
+        <div class="doctor-info"><i class="fas fa-clock"></i> 09:00 - 18:00</div>
+        <div class="doctor-info"><i class="fas fa-star"></i> 4.8</div>
+        <button class="view-more">Ver más</button>
+      </div>
+    </div>
+
+
+        <div class="doctor-card">
+      <div class="doctor-top">
+        <p class="specialty">Ortopeda</p>
+        <img src="img/perfilDoctor06.png" alt="Doctor 5" class="profile-img">
+      </div>
+      <div class="doctor-bottom">
+        <div class="doctor-name">Dr. Emanuel Flores</div>
+        <div class="doctor-info"><i class="fas fa-hospital"></i> Hospital Punta Pacífica</div>
+        <div class="doctor-info"><i class="fas fa-clock"></i> 08:00 - 14:00</div>
+        <div class="doctor-info"><i class="fas fa-star"></i> 4.9</div>
+        <button class="view-more">Ver más</button>
+      </div>
+    </div>
+
+
+        <div class="doctor-card">
+      <div class="doctor-top">
+        <p class="specialty">Odontología</p>
+        <img src="img/perfilDoctor07.png" alt="Doctor 6" class="profile-img">
+      </div>
+      <div class="doctor-bottom">
+        <div class="doctor-name">Dr. Francisco Paredes</div>
+        <div class="doctor-info"><i class="fas fa-hospital"></i> Policlínica J.J. Vallarino</div>
+        <div class="doctor-info"><i class="fas fa-clock"></i> 09:00 - 17:00</div>
+        <div class="doctor-info"><i class="fas fa-star"></i> 4.7</div>
         <button class="view-more">Ver más</button>
       </div>
     </div>
@@ -187,12 +236,27 @@
         <div class="doctor-card">
       <div class="doctor-top">
         <p class="specialty">Pediatra</p>
-        <img src="img/perfilUsuario01.jpg" alt="Doctor 4" class="profile-img">
+        <img src="img/perfilDoctor08.png" alt="Doctor 7" class="profile-img">
       </div>
       <div class="doctor-bottom">
         <div class="doctor-name">Dra. Laura Ruiz</div>
-        <div class="doctor-info"><i class="fas fa-hospital"></i> Hospital Infantil</div>
-        <div class="doctor-info"><i class="fas fa-clock"></i> 09:00 - 17:00</div>
+        <div class="doctor-info"><i class="fas fa-hospital"></i> Hospital del Niño</div>
+        <div class="doctor-info"><i class="fas fa-clock"></i> 09:00 - 19:00</div>
+        <div class="doctor-info"><i class="fas fa-star"></i> 4.8</div>
+        <button class="view-more">Ver más</button>
+      </div>
+    </div>
+
+
+        <div class="doctor-card">
+      <div class="doctor-top">
+        <p class="specialty">Otorrino</p>
+        <img src="img/perfilDoctor09.png" alt="Doctor 8" class="profile-img">
+      </div>
+      <div class="doctor-bottom">
+        <div class="doctor-name">Dr. Daniel Aguirre</div>
+        <div class="doctor-info"><i class="fas fa-hospital"></i> Hospital del Este</div>
+        <div class="doctor-info"><i class="fas fa-clock"></i> 07:00 - 13:00</div>
         <div class="doctor-info"><i class="fas fa-star"></i> 4.9</div>
         <button class="view-more">Ver más</button>
       </div>
@@ -201,73 +265,13 @@
 
         <div class="doctor-card">
       <div class="doctor-top">
-        <p class="specialty">Pediatra</p>
-        <img src="img/perfilUsuario01.jpg" alt="Doctor 5" class="profile-img">
-      </div>
-      <div class="doctor-bottom">
-        <div class="doctor-name">Dra. Laura Ruiz</div>
-        <div class="doctor-info"><i class="fas fa-hospital"></i> Hospital Infantil</div>
-        <div class="doctor-info"><i class="fas fa-clock"></i> 09:00 - 17:00</div>
-        <div class="doctor-info"><i class="fas fa-star"></i> 4.9</div>
-        <button class="view-more">Ver más</button>
-      </div>
-    </div>
-
-
-        <div class="doctor-card">
-      <div class="doctor-top">
-        <p class="specialty">Pediatra</p>
-        <img src="img/perfilUsuario01.jpg" alt="Doctor 6" class="profile-img">
-      </div>
-      <div class="doctor-bottom">
-        <div class="doctor-name">Dra. Laura Ruiz</div>
-        <div class="doctor-info"><i class="fas fa-hospital"></i> Hospital Infantil</div>
-        <div class="doctor-info"><i class="fas fa-clock"></i> 09:00 - 17:00</div>
-        <div class="doctor-info"><i class="fas fa-star"></i> 4.9</div>
-        <button class="view-more">Ver más</button>
-      </div>
-    </div>
-
-
-        <div class="doctor-card">
-      <div class="doctor-top">
-        <p class="specialty">Pediatra</p>
-        <img src="img/perfilUsuario01.jpg" alt="Doctor 7" class="profile-img">
-      </div>
-      <div class="doctor-bottom">
-        <div class="doctor-name">Dra. Laura Ruiz</div>
-        <div class="doctor-info"><i class="fas fa-hospital"></i> Hospital Infantil</div>
-        <div class="doctor-info"><i class="fas fa-clock"></i> 09:00 - 17:00</div>
-        <div class="doctor-info"><i class="fas fa-star"></i> 4.9</div>
-        <button class="view-more">Ver más</button>
-      </div>
-    </div>
-
-
-        <div class="doctor-card">
-      <div class="doctor-top">
-        <p class="specialty">Pediatra</p>
-        <img src="img/perfilUsuario01.jpg" alt="Doctor 8" class="profile-img">
-      </div>
-      <div class="doctor-bottom">
-        <div class="doctor-name">Dra. Laura Ruiz</div>
-        <div class="doctor-info"><i class="fas fa-hospital"></i> Hospital Infantil</div>
-        <div class="doctor-info"><i class="fas fa-clock"></i> 09:00 - 17:00</div>
-        <div class="doctor-info"><i class="fas fa-star"></i> 4.9</div>
-        <button class="view-more">Ver más</button>
-      </div>
-    </div>
-
-
-        <div class="doctor-card">
-      <div class="doctor-top">
-        <p class="specialty">Médico general</p>
-        <img src="img/perfilUsuario01.jpg" alt="Doctor 9" class="profile-img">
+        <p class="specialty">Psiquiatría</p>
+        <img src="img/perfilDoctor10.png" alt="Doctor 9" class="profile-img">
       </div>
       <div class="doctor-bottom">
         <div class="doctor-name">Dra. Elizabeth Rodríguez</div>
-        <div class="doctor-info"><i class="fas fa-hospital"></i> Hospital Infantil</div>
-        <div class="doctor-info"><i class="fas fa-clock"></i> 09:00 - 17:00</div>
+        <div class="doctor-info"><i class="fas fa-hospital"></i> Hospital San Fernando</div>
+        <div class="doctor-info"><i class="fas fa-clock"></i> 09:00 - 22:00</div>
         <div class="doctor-info"><i class="fas fa-star"></i> 4.9</div>
         <button class="view-more">Ver más</button>
       </div>
@@ -276,12 +280,12 @@
 
             <div class="doctor-card">
       <div class="doctor-top">
-        <p class="specialty">Médico general</p>
-        <img src="img/perfilUsuario01.jpg" alt="Doctor 9" class="profile-img">
+        <p class="specialty">Cirujano General</p>
+        <img src="img/perfilDoctor11.png" alt="Doctor 9" class="profile-img">
       </div>
       <div class="doctor-bottom">
-        <div class="doctor-name">Dra. Elizabeth Rodríguez</div>
-        <div class="doctor-info"><i class="fas fa-hospital"></i> Hospital Infantil</div>
+        <div class="doctor-name">Dr. Ben Allen</div>
+        <div class="doctor-info"><i class="fas fa-hospital"></i> Hospital Punta Pacífica</div>
         <div class="doctor-info"><i class="fas fa-clock"></i> 09:00 - 17:00</div>
         <div class="doctor-info"><i class="fas fa-star"></i> 4.9</div>
         <button class="view-more">Ver más</button>
@@ -290,9 +294,10 @@
 
     <!-- Repetir si se quiere agregar más doctores -->
   </div>
-      </div>
-    </div>
-  </div>
+</div>
+
+
+        
 
   <script>
     const btnMenu = document.querySelector('.btn-menu-hamburguesa');
